@@ -38,7 +38,7 @@ namespace GestAppts
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestAppt));
             this.Submit = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pc1 = new System.Windows.Forms.PictureBox();
             this.Nom = new System.Windows.Forms.Label();
             this.Prenom = new System.Windows.Forms.Label();
             this.DateDeNaissance = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@ namespace GestAppts
             this.lblpays = new System.Windows.Forms.Label();
             this.lblville = new System.Windows.Forms.Label();
             this.lblchoix = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc4)).BeginInit();
@@ -105,15 +105,15 @@ namespace GestAppts
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // pc1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(488, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pc1.Image = ((System.Drawing.Image)(resources.GetObject("pc1.Image")));
+            this.pc1.Location = new System.Drawing.Point(488, 12);
+            this.pc1.Name = "pc1";
+            this.pc1.Size = new System.Drawing.Size(268, 88);
+            this.pc1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pc1.TabIndex = 2;
+            this.pc1.TabStop = false;
             // 
             // Nom
             // 
@@ -456,7 +456,7 @@ namespace GestAppts
             this.Controls.Add(this.DateDeNaissance);
             this.Controls.Add(this.Prenom);
             this.Controls.Add(this.Nom);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pc1);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
             this.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -464,7 +464,7 @@ namespace GestAppts
             this.Name = "GestAppt";
             this.Text = "Gest-Appts";
             this.Load += new System.EventHandler(this.GestAppt_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc4)).EndInit();
@@ -481,7 +481,8 @@ namespace GestAppts
         #endregion
 
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pc1;
+
 
 
         private System.Windows.Forms.Label Nom;
@@ -490,10 +491,12 @@ namespace GestAppts
         private PictureBox pc2;
 
 
+
         private System.Windows.Forms.Label Prenom;
         private System.Windows.Forms.TextBox textBoxPrenom;
         private Label lblprenom;
         private PictureBox pc3;
+
 
 
         private System.Windows.Forms.Label DateDeNaissance;
@@ -502,10 +505,12 @@ namespace GestAppts
         private PictureBox pc4;
 
 
+
         private System.Windows.Forms.Label Tele;
         private System.Windows.Forms.TextBox textBoxTele;
         private Label lbltele;
         private PictureBox pc5;
+
 
 
         private System.Windows.Forms.Label ChoixSpct;
@@ -516,10 +521,13 @@ namespace GestAppts
         private PictureBox pc9;
 
 
+
         private System.Windows.Forms.Label labelville;
         private System.Windows.Forms.TextBox textBoxVille;
         private Label lblville;
         private PictureBox pc6;
+
+
 
         private System.Windows.Forms.Label pays;
         private System.Windows.Forms.TextBox textBoxPays;
@@ -527,10 +535,12 @@ namespace GestAppts
         private PictureBox pc7;
 
 
+
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.TextBox textBoxEmail;
         private Label lblmail;
         private PictureBox pc8;
+
 
 
         private System.Windows.Forms.Button Submit;
