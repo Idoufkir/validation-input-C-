@@ -1,0 +1,16 @@
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.exe
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.deps.json
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.runtimeconfig.json
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.runtimeconfig.dev.json
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\GestAppts.pdb
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.Properties.Resources.resources
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.AssemblyInfo.cs
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.pdb
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.genruntimeconfig.cache
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.GestAppt.resources
