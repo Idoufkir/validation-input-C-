@@ -55,8 +55,6 @@ namespace GestAppts
             this.textBoxDateDeNaissance = new System.Windows.Forms.TextBox();
             this.textBoxTele = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.textBoxPays = new System.Windows.Forms.TextBox();
-            this.textBoxVille = new System.Windows.Forms.TextBox();
             this.pc2 = new System.Windows.Forms.PictureBox();
             this.pc3 = new System.Windows.Forms.PictureBox();
             this.pc4 = new System.Windows.Forms.PictureBox();
@@ -73,6 +71,8 @@ namespace GestAppts
             this.lblpays = new System.Windows.Forms.Label();
             this.lblville = new System.Windows.Forms.Label();
             this.lblchoix = new System.Windows.Forms.Label();
+            this.cmbpays = new System.Windows.Forms.ComboBox();
+            this.cmbville = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).BeginInit();
@@ -258,20 +258,6 @@ namespace GestAppts
             this.textBoxEmail.Size = new System.Drawing.Size(169, 22);
             this.textBoxEmail.TabIndex = 18;
             // 
-            // textBoxPays
-            // 
-            this.textBoxPays.Location = new System.Drawing.Point(859, 223);
-            this.textBoxPays.Name = "textBoxPays";
-            this.textBoxPays.Size = new System.Drawing.Size(122, 22);
-            this.textBoxPays.TabIndex = 19;
-            // 
-            // textBoxVille
-            // 
-            this.textBoxVille.Location = new System.Drawing.Point(859, 274);
-            this.textBoxVille.Name = "textBoxVille";
-            this.textBoxVille.Size = new System.Drawing.Size(122, 22);
-            this.textBoxVille.TabIndex = 20;
-            // 
             // pc2
             // 
             this.pc2.Location = new System.Drawing.Point(467, 142);
@@ -416,12 +402,35 @@ namespace GestAppts
             this.lblchoix.Size = new System.Drawing.Size(0, 17);
             this.lblchoix.TabIndex = 36;
             // 
+            // cmbpays
+            // 
+            this.cmbpays.FormattingEnabled = true;
+            this.cmbpays.Items.AddRange(new object[] {
+            "MAROC",
+            "USA",
+            "FRANCE"});
+            this.cmbpays.Location = new System.Drawing.Point(859, 223);
+            this.cmbpays.Name = "cmbpays";
+            this.cmbpays.Size = new System.Drawing.Size(121, 23);
+            this.cmbpays.TabIndex = 37;
+            this.cmbpays.SelectedIndexChanged += new System.EventHandler(this.cmbpays_SelectedIndexChanged);
+            // 
+            // cmbville
+            // 
+            this.cmbville.FormattingEnabled = true;
+            this.cmbville.Location = new System.Drawing.Point(859, 269);
+            this.cmbville.Name = "cmbville";
+            this.cmbville.Size = new System.Drawing.Size(121, 23);
+            this.cmbville.TabIndex = 38;
+            // 
             // GestAppt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1192, 469);
+            this.Controls.Add(this.cmbville);
+            this.Controls.Add(this.cmbpays);
             this.Controls.Add(this.lblchoix);
             this.Controls.Add(this.lblville);
             this.Controls.Add(this.lblpays);
@@ -438,8 +447,6 @@ namespace GestAppts
             this.Controls.Add(this.pc4);
             this.Controls.Add(this.pc3);
             this.Controls.Add(this.pc2);
-            this.Controls.Add(this.textBoxVille);
-            this.Controls.Add(this.textBoxPays);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxTele);
             this.Controls.Add(this.textBoxDateDeNaissance);
@@ -523,14 +530,14 @@ namespace GestAppts
 
 
         private System.Windows.Forms.Label labelville;
-        private System.Windows.Forms.TextBox textBoxVille;
+        private ComboBox cmbville;
         private Label lblville;
         private PictureBox pc6;
 
 
 
         private System.Windows.Forms.Label pays;
-        private System.Windows.Forms.TextBox textBoxPays;
+        private ComboBox cmbpays;
         private Label lblpays;
         private PictureBox pc7;
 
@@ -545,18 +552,6 @@ namespace GestAppts
 
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button Cancel;
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 
