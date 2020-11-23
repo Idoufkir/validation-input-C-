@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace GestAppts
 {
@@ -55,7 +55,7 @@ namespace GestAppts
             Regexp("^[a-zA-Z]+$", textBoxPrenom, pc3, lblprenom, "Le Prénom");
             Regexp("^[0-3]?[0-9].[0-3]?[0-9].(?:[0-9]{2})?[0-9]{2}$", textBoxDateDeNaissance, pc4, lbldtnc, "La Date de naissance");
             Regexp("^(06)([0-9]{8})+$", textBoxTele, pc5, lbltele, "Le N° de Téléphone");
-            Regexp("^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,}$", textBoxEmail, pc8, lblmail, "L'adresse e-mail");
+            Regexp(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", textBoxEmail, pc8, lblmail, "L'adresse e-mail");
 
 
 
@@ -119,6 +119,11 @@ namespace GestAppts
             }
 
 
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
