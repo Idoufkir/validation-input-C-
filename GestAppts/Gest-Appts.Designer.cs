@@ -47,9 +47,6 @@ namespace GestAppts
             this.labelville = new System.Windows.Forms.Label();
             this.pays = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.Label();
-            this.ChoixSpct1 = new System.Windows.Forms.CheckBox();
-            this.ChoixSpct2 = new System.Windows.Forms.CheckBox();
-            this.ChoixSpct3 = new System.Windows.Forms.CheckBox();
             this.textBoxNom = new System.Windows.Forms.TextBox();
             this.textBoxPrenom = new System.Windows.Forms.TextBox();
             this.textBoxDateDeNaissance = new System.Windows.Forms.TextBox();
@@ -73,6 +70,7 @@ namespace GestAppts
             this.lblchoix = new System.Windows.Forms.Label();
             this.cmbpays = new System.Windows.Forms.ComboBox();
             this.cmbville = new System.Windows.Forms.ComboBox();
+            this.specialite = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).BeginInit();
@@ -162,6 +160,7 @@ namespace GestAppts
             this.ChoixSpct.Size = new System.Drawing.Size(149, 20);
             this.ChoixSpct.TabIndex = 10;
             this.ChoixSpct.Text = "Choix de spécialité :";
+            this.ChoixSpct.Click += new System.EventHandler(this.ChoixSpct_Click);
             // 
             // labelville
             // 
@@ -192,36 +191,6 @@ namespace GestAppts
             this.email.TabIndex = 7;
             this.email.Text = "Adresse email :";
             this.email.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // ChoixSpct1
-            // 
-            this.ChoixSpct1.AutoSize = true;
-            this.ChoixSpct1.Location = new System.Drawing.Point(392, 382);
-            this.ChoixSpct1.Name = "ChoixSpct1";
-            this.ChoixSpct1.Size = new System.Drawing.Size(67, 19);
-            this.ChoixSpct1.TabIndex = 11;
-            this.ChoixSpct1.Text = "Choix 1";
-            this.ChoixSpct1.UseVisualStyleBackColor = true;
-            // 
-            // ChoixSpct2
-            // 
-            this.ChoixSpct2.AutoSize = true;
-            this.ChoixSpct2.Location = new System.Drawing.Point(512, 382);
-            this.ChoixSpct2.Name = "ChoixSpct2";
-            this.ChoixSpct2.Size = new System.Drawing.Size(67, 19);
-            this.ChoixSpct2.TabIndex = 12;
-            this.ChoixSpct2.Text = "Choix 2";
-            this.ChoixSpct2.UseVisualStyleBackColor = true;
-            // 
-            // ChoixSpct3
-            // 
-            this.ChoixSpct3.AutoSize = true;
-            this.ChoixSpct3.Location = new System.Drawing.Point(638, 382);
-            this.ChoixSpct3.Name = "ChoixSpct3";
-            this.ChoixSpct3.Size = new System.Drawing.Size(67, 19);
-            this.ChoixSpct3.TabIndex = 13;
-            this.ChoixSpct3.Text = "Choix 3";
-            this.ChoixSpct3.UseVisualStyleBackColor = true;
             // 
             // textBoxNom
             // 
@@ -424,12 +393,25 @@ namespace GestAppts
             this.cmbville.Size = new System.Drawing.Size(121, 23);
             this.cmbville.TabIndex = 38;
             // 
+            // specialite
+            // 
+            this.specialite.FormattingEnabled = true;
+            this.specialite.Items.AddRange(new object[] {
+            "Full Stack",
+            "JEE",
+            "C#"});
+            this.specialite.Location = new System.Drawing.Point(375, 374);
+            this.specialite.Name = "specialite";
+            this.specialite.Size = new System.Drawing.Size(121, 23);
+            this.specialite.TabIndex = 39;
+            // 
             // GestAppt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1192, 469);
+            this.Controls.Add(this.specialite);
             this.Controls.Add(this.cmbville);
             this.Controls.Add(this.cmbpays);
             this.Controls.Add(this.lblchoix);
@@ -453,9 +435,6 @@ namespace GestAppts
             this.Controls.Add(this.textBoxDateDeNaissance);
             this.Controls.Add(this.textBoxPrenom);
             this.Controls.Add(this.textBoxNom);
-            this.Controls.Add(this.ChoixSpct3);
-            this.Controls.Add(this.ChoixSpct2);
-            this.Controls.Add(this.ChoixSpct1);
             this.Controls.Add(this.ChoixSpct);
             this.Controls.Add(this.labelville);
             this.Controls.Add(this.pays);
@@ -522,9 +501,6 @@ namespace GestAppts
 
 
         private System.Windows.Forms.Label ChoixSpct;
-        private System.Windows.Forms.CheckBox ChoixSpct1;
-        private System.Windows.Forms.CheckBox ChoixSpct2;
-        private System.Windows.Forms.CheckBox ChoixSpct3;
         private Label lblchoix;
         private PictureBox pc9;
 
@@ -538,7 +514,7 @@ namespace GestAppts
 
 
         private System.Windows.Forms.Label pays;
-        private ComboBox cmbpays;
+        private System.Windows.Forms.ComboBox cmbpays;
         private Label lblpays;
         private PictureBox pc7;
 
@@ -553,7 +529,7 @@ namespace GestAppts
 
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button Cancel;
-
+        private ComboBox specialite;
     }
 
 

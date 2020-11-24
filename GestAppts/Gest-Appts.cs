@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 
+
 namespace GestAppts
 {
     public partial class GestAppt : Form
@@ -51,6 +52,17 @@ namespace GestAppts
 
         private void Submit_Click(object sender, EventArgs e)
         {
+
+            string connetionString;
+            SqlConnection cnn;
+            connetionString = @"Data Source=ANDROID_76A9751;Initial Catalog=gestAppt;Integrated Security=True";
+            cnn = new SqlConnection(connetionString);
+            cnn.Open();
+            MessageBox.Show("Connection Open  !");
+            cnn.Close();
+
+
+
             Regexp("^[a-zA-Z]+$", textBoxNom, pc2, lblnom, "Le Nom");
             Regexp("^[a-zA-Z]+$", textBoxPrenom, pc3, lblprenom, "Le Prénom");
             Regexp("^[0-3]?[0-9].[0-3]?[0-9].(?:[0-9]{2})?[0-9]{2}$", textBoxDateDeNaissance, pc4, lbldtnc, "La Date de naissance");
@@ -58,6 +70,24 @@ namespace GestAppts
             Regexp(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", textBoxEmail, pc8, lblmail, "L'adresse e-mail");
 
 
+
+
+
+            if (cmbpays.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez sélectionner un Pays");
+                return;
+            }
+            if (cmbville.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez sélectionner un ville");
+                return;
+            }
+            if (specialite.SelectedItem == null)
+            {
+                MessageBox.Show("Veuillez sélectionner une spécialité");
+                return;
+            };
 
 
 
@@ -125,5 +155,12 @@ namespace GestAppts
         {
             Close();
         }
+
+        private void ChoixSpct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
