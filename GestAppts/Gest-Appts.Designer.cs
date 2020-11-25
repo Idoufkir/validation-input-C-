@@ -71,6 +71,7 @@ namespace GestAppts
             this.cmbpays = new System.Windows.Forms.ComboBox();
             this.cmbville = new System.Windows.Forms.ComboBox();
             this.specialite = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pc1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc3)).BeginInit();
@@ -80,12 +81,13 @@ namespace GestAppts
             ((System.ComponentModel.ISupportInitialize)(this.pc7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Submit
             // 
             this.Submit.BackColor = System.Drawing.Color.LimeGreen;
-            this.Submit.Location = new System.Drawing.Point(1095, 434);
+            this.Submit.Location = new System.Drawing.Point(621, 591);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(75, 23);
             this.Submit.TabIndex = 0;
@@ -96,7 +98,7 @@ namespace GestAppts
             // Cancel
             // 
             this.Cancel.BackColor = System.Drawing.Color.Khaki;
-            this.Cancel.Location = new System.Drawing.Point(994, 434);
+            this.Cancel.Location = new System.Drawing.Point(520, 591);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(75, 23);
             this.Cancel.TabIndex = 1;
@@ -117,7 +119,7 @@ namespace GestAppts
             // Nom
             // 
             this.Nom.AutoSize = true;
-            this.Nom.Location = new System.Drawing.Point(221, 145);
+            this.Nom.Location = new System.Drawing.Point(12, 85);
             this.Nom.Name = "Nom";
             this.Nom.Size = new System.Drawing.Size(40, 15);
             this.Nom.TabIndex = 3;
@@ -126,7 +128,7 @@ namespace GestAppts
             // Prenom
             // 
             this.Prenom.AutoSize = true;
-            this.Prenom.Location = new System.Drawing.Point(221, 193);
+            this.Prenom.Location = new System.Drawing.Point(12, 133);
             this.Prenom.Name = "Prenom";
             this.Prenom.Size = new System.Drawing.Size(56, 15);
             this.Prenom.TabIndex = 4;
@@ -135,7 +137,7 @@ namespace GestAppts
             // DateDeNaissance
             // 
             this.DateDeNaissance.AutoSize = true;
-            this.DateDeNaissance.Location = new System.Drawing.Point(221, 244);
+            this.DateDeNaissance.Location = new System.Drawing.Point(12, 184);
             this.DateDeNaissance.Name = "DateDeNaissance";
             this.DateDeNaissance.Size = new System.Drawing.Size(112, 15);
             this.DateDeNaissance.TabIndex = 5;
@@ -144,7 +146,7 @@ namespace GestAppts
             // Tele
             // 
             this.Tele.AutoSize = true;
-            this.Tele.Location = new System.Drawing.Point(221, 304);
+            this.Tele.Location = new System.Drawing.Point(12, 244);
             this.Tele.Name = "Tele";
             this.Tele.Size = new System.Drawing.Size(69, 15);
             this.Tele.TabIndex = 6;
@@ -155,7 +157,7 @@ namespace GestAppts
             this.ChoixSpct.AutoSize = true;
             this.ChoixSpct.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ChoixSpct.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ChoixSpct.Location = new System.Drawing.Point(362, 351);
+            this.ChoixSpct.Location = new System.Drawing.Point(92, 442);
             this.ChoixSpct.Name = "ChoixSpct";
             this.ChoixSpct.Size = new System.Drawing.Size(149, 20);
             this.ChoixSpct.TabIndex = 10;
@@ -165,7 +167,7 @@ namespace GestAppts
             // labelville
             // 
             this.labelville.AutoSize = true;
-            this.labelville.Location = new System.Drawing.Point(779, 277);
+            this.labelville.Location = new System.Drawing.Point(12, 397);
             this.labelville.Name = "labelville";
             this.labelville.Size = new System.Drawing.Size(36, 15);
             this.labelville.TabIndex = 9;
@@ -175,7 +177,7 @@ namespace GestAppts
             // pays
             // 
             this.pays.AutoSize = true;
-            this.pays.Location = new System.Drawing.Point(779, 226);
+            this.pays.Location = new System.Drawing.Point(12, 346);
             this.pays.Name = "pays";
             this.pays.Size = new System.Drawing.Size(40, 15);
             this.pays.TabIndex = 8;
@@ -185,7 +187,7 @@ namespace GestAppts
             // email
             // 
             this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(779, 178);
+            this.email.Location = new System.Drawing.Point(12, 298);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(89, 15);
             this.email.TabIndex = 7;
@@ -194,7 +196,7 @@ namespace GestAppts
             // 
             // textBoxNom
             // 
-            this.textBoxNom.Location = new System.Drawing.Point(312, 142);
+            this.textBoxNom.Location = new System.Drawing.Point(103, 82);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(149, 22);
             this.textBoxNom.TabIndex = 14;
@@ -202,35 +204,35 @@ namespace GestAppts
             // 
             // textBoxPrenom
             // 
-            this.textBoxPrenom.Location = new System.Drawing.Point(312, 190);
+            this.textBoxPrenom.Location = new System.Drawing.Point(103, 130);
             this.textBoxPrenom.Name = "textBoxPrenom";
             this.textBoxPrenom.Size = new System.Drawing.Size(149, 22);
             this.textBoxPrenom.TabIndex = 15;
             // 
             // textBoxDateDeNaissance
             // 
-            this.textBoxDateDeNaissance.Location = new System.Drawing.Point(362, 241);
+            this.textBoxDateDeNaissance.Location = new System.Drawing.Point(153, 181);
             this.textBoxDateDeNaissance.Name = "textBoxDateDeNaissance";
             this.textBoxDateDeNaissance.Size = new System.Drawing.Size(152, 22);
             this.textBoxDateDeNaissance.TabIndex = 16;
             // 
             // textBoxTele
             // 
-            this.textBoxTele.Location = new System.Drawing.Point(312, 304);
+            this.textBoxTele.Location = new System.Drawing.Point(103, 244);
             this.textBoxTele.Name = "textBoxTele";
             this.textBoxTele.Size = new System.Drawing.Size(149, 22);
             this.textBoxTele.TabIndex = 17;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(884, 175);
+            this.textBoxEmail.Location = new System.Drawing.Point(117, 295);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(169, 22);
             this.textBoxEmail.TabIndex = 18;
             // 
             // pc2
             // 
-            this.pc2.Location = new System.Drawing.Point(467, 142);
+            this.pc2.Location = new System.Drawing.Point(258, 82);
             this.pc2.Name = "pc2";
             this.pc2.Size = new System.Drawing.Size(23, 22);
             this.pc2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,7 +241,7 @@ namespace GestAppts
             // 
             // pc3
             // 
-            this.pc3.Location = new System.Drawing.Point(467, 190);
+            this.pc3.Location = new System.Drawing.Point(258, 130);
             this.pc3.Name = "pc3";
             this.pc3.Size = new System.Drawing.Size(23, 22);
             this.pc3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +250,7 @@ namespace GestAppts
             // 
             // pc4
             // 
-            this.pc4.Location = new System.Drawing.Point(520, 241);
+            this.pc4.Location = new System.Drawing.Point(311, 181);
             this.pc4.Name = "pc4";
             this.pc4.Size = new System.Drawing.Size(23, 22);
             this.pc4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +259,7 @@ namespace GestAppts
             // 
             // pc5
             // 
-            this.pc5.Location = new System.Drawing.Point(467, 304);
+            this.pc5.Location = new System.Drawing.Point(258, 244);
             this.pc5.Name = "pc5";
             this.pc5.Size = new System.Drawing.Size(23, 22);
             this.pc5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,7 +268,7 @@ namespace GestAppts
             // 
             // pc6
             // 
-            this.pc6.Location = new System.Drawing.Point(987, 274);
+            this.pc6.Location = new System.Drawing.Point(220, 394);
             this.pc6.Name = "pc6";
             this.pc6.Size = new System.Drawing.Size(23, 22);
             this.pc6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +277,7 @@ namespace GestAppts
             // 
             // pc7
             // 
-            this.pc7.Location = new System.Drawing.Point(987, 223);
+            this.pc7.Location = new System.Drawing.Point(220, 343);
             this.pc7.Name = "pc7";
             this.pc7.Size = new System.Drawing.Size(23, 22);
             this.pc7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -284,7 +286,7 @@ namespace GestAppts
             // 
             // pc8
             // 
-            this.pc8.Location = new System.Drawing.Point(1059, 175);
+            this.pc8.Location = new System.Drawing.Point(292, 295);
             this.pc8.Name = "pc8";
             this.pc8.Size = new System.Drawing.Size(23, 22);
             this.pc8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,7 +295,7 @@ namespace GestAppts
             // 
             // pc9
             // 
-            this.pc9.Location = new System.Drawing.Point(517, 351);
+            this.pc9.Location = new System.Drawing.Point(247, 442);
             this.pc9.Name = "pc9";
             this.pc9.Size = new System.Drawing.Size(23, 22);
             this.pc9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,7 +306,7 @@ namespace GestAppts
             // 
             this.lblnom.AutoSize = true;
             this.lblnom.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblnom.Location = new System.Drawing.Point(500, 145);
+            this.lblnom.Location = new System.Drawing.Point(291, 85);
             this.lblnom.Name = "lblnom";
             this.lblnom.Size = new System.Drawing.Size(0, 17);
             this.lblnom.TabIndex = 29;
@@ -313,7 +315,7 @@ namespace GestAppts
             // 
             this.lblprenom.AutoSize = true;
             this.lblprenom.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblprenom.Location = new System.Drawing.Point(496, 192);
+            this.lblprenom.Location = new System.Drawing.Point(287, 132);
             this.lblprenom.Name = "lblprenom";
             this.lblprenom.Size = new System.Drawing.Size(0, 17);
             this.lblprenom.TabIndex = 30;
@@ -322,7 +324,7 @@ namespace GestAppts
             // 
             this.lbldtnc.AutoSize = true;
             this.lbldtnc.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbldtnc.Location = new System.Drawing.Point(549, 244);
+            this.lbldtnc.Location = new System.Drawing.Point(340, 184);
             this.lbldtnc.Name = "lbldtnc";
             this.lbldtnc.Size = new System.Drawing.Size(0, 17);
             this.lbldtnc.TabIndex = 31;
@@ -331,7 +333,7 @@ namespace GestAppts
             // 
             this.lbltele.AutoSize = true;
             this.lbltele.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbltele.Location = new System.Drawing.Point(496, 306);
+            this.lbltele.Location = new System.Drawing.Point(287, 246);
             this.lbltele.Name = "lbltele";
             this.lbltele.Size = new System.Drawing.Size(0, 17);
             this.lbltele.TabIndex = 32;
@@ -340,7 +342,7 @@ namespace GestAppts
             // 
             this.lblmail.AutoSize = true;
             this.lblmail.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblmail.Location = new System.Drawing.Point(1088, 178);
+            this.lblmail.Location = new System.Drawing.Point(321, 298);
             this.lblmail.Name = "lblmail";
             this.lblmail.Size = new System.Drawing.Size(0, 17);
             this.lblmail.TabIndex = 33;
@@ -349,7 +351,7 @@ namespace GestAppts
             // 
             this.lblpays.AutoSize = true;
             this.lblpays.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblpays.Location = new System.Drawing.Point(1016, 226);
+            this.lblpays.Location = new System.Drawing.Point(249, 346);
             this.lblpays.Name = "lblpays";
             this.lblpays.Size = new System.Drawing.Size(0, 17);
             this.lblpays.TabIndex = 34;
@@ -358,7 +360,7 @@ namespace GestAppts
             // 
             this.lblville.AutoSize = true;
             this.lblville.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblville.Location = new System.Drawing.Point(1016, 277);
+            this.lblville.Location = new System.Drawing.Point(249, 397);
             this.lblville.Name = "lblville";
             this.lblville.Size = new System.Drawing.Size(0, 17);
             this.lblville.TabIndex = 35;
@@ -367,7 +369,7 @@ namespace GestAppts
             // 
             this.lblchoix.AutoSize = true;
             this.lblchoix.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblchoix.Location = new System.Drawing.Point(549, 354);
+            this.lblchoix.Location = new System.Drawing.Point(279, 445);
             this.lblchoix.Name = "lblchoix";
             this.lblchoix.Size = new System.Drawing.Size(0, 17);
             this.lblchoix.TabIndex = 36;
@@ -379,7 +381,7 @@ namespace GestAppts
             "MAROC",
             "USA",
             "FRANCE"});
-            this.cmbpays.Location = new System.Drawing.Point(859, 223);
+            this.cmbpays.Location = new System.Drawing.Point(92, 343);
             this.cmbpays.Name = "cmbpays";
             this.cmbpays.Size = new System.Drawing.Size(121, 23);
             this.cmbpays.TabIndex = 37;
@@ -388,7 +390,7 @@ namespace GestAppts
             // cmbville
             // 
             this.cmbville.FormattingEnabled = true;
-            this.cmbville.Location = new System.Drawing.Point(859, 269);
+            this.cmbville.Location = new System.Drawing.Point(92, 389);
             this.cmbville.Name = "cmbville";
             this.cmbville.Size = new System.Drawing.Size(121, 23);
             this.cmbville.TabIndex = 38;
@@ -400,17 +402,28 @@ namespace GestAppts
             "Full Stack",
             "JEE",
             "C#"});
-            this.specialite.Location = new System.Drawing.Point(375, 374);
+            this.specialite.Location = new System.Drawing.Point(105, 465);
             this.specialite.Name = "specialite";
             this.specialite.Size = new System.Drawing.Size(121, 23);
             this.specialite.TabIndex = 39;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(813, 244);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 40;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // GestAppt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1192, 469);
+            this.ClientSize = new System.Drawing.Size(1204, 626);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.specialite);
             this.Controls.Add(this.cmbville);
             this.Controls.Add(this.cmbpays);
@@ -460,6 +473,7 @@ namespace GestAppts
             ((System.ComponentModel.ISupportInitialize)(this.pc7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pc9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,6 +544,7 @@ namespace GestAppts
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.Button Cancel;
         private ComboBox specialite;
+        private DataGridView dataGridView1;
     }
 
 

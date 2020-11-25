@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace GestAppts
 {
     public partial class GestAppt : Form
     {
+
+        public int id;
         public GestAppt()
         {
             InitializeComponent();
@@ -50,16 +52,50 @@ namespace GestAppts
 
         }
 
+        private void GetUsersRecord()
+        {
+            SqlConnection con = new SqlConnection("Data Source=ANDROID_76A9751;Initial Catalog=gestAppt;Integrated Security=True");
+
+
+            SqlCommand cmd = new SqlCommand("Select * from [insert-data] ORDER BY id DESC", con);
+            DataTable dt = new DataTable();
+
+            con.Open();
+
+            SqlDataReader sdr = cmd.ExecuteReader();
+            dt.Load(sdr);
+            con.Close();
+
+            dataGridView1.DataSource = dt;
+        }
+
         private void Submit_Click(object sender, EventArgs e)
         {
 
-            string connetionString;
-            SqlConnection cnn;
-            connetionString = @"Data Source=ANDROID_76A9751;Initial Catalog=gestAppt;Integrated Security=True";
-            cnn = new SqlConnection(connetionString);
-            cnn.Open();
-            MessageBox.Show("Connection Open  !");
-            cnn.Close();
+            if (string.IsNullOrEmpty(textBoxNom.Text) || string.IsNullOrEmpty(textBoxPrenom.Text) || string.IsNullOrEmpty(textBoxEmail.Text) || string.IsNullOrEmpty(textBoxTele.Text) || string.IsNullOrEmpty(textBoxDateDeNaissance.Text) || string.IsNullOrEmpty(cmbpays.Text) || string.IsNullOrEmpty(cmbville.Text) || string.IsNullOrEmpty(specialite.Text))
+            {
+                MessageBox.Show("please insert your information", "warnnaing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                SqlConnection con = new SqlConnection("Data Source=ANDROID_76A9751;Initial Catalog=gestAppt;Integrated Security=True");
+                con.Open();
+
+                SqlCommand cmd = new SqlCommand("insert into  [insert-data] (nom, prenom, email, tele, datenaissance, pays, ville, spct) values ('" + textBoxNom.Text + "', '" + textBoxPrenom.Text + "' ,'" + textBoxEmail.Text + "','" + textBoxTele.Text + "','" + textBoxDateDeNaissance.Text + "','" + cmbpays.Text + "','" + cmbville.Text + "','" + specialite.Text + "')", con);
+                int i = cmd.ExecuteNonQuery();
+                if (i != 0)
+                {
+                    MessageBox.Show("the user information is saved ", "saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("user information is unsaved", "warnnaing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                con.Close();
+
+                GetUsersRecord();
+                ResetData();
+            }
 
 
 
@@ -161,6 +197,40 @@ namespace GestAppts
 
         }
 
-       
+        private void ResetData()
+        {
+            id = 0;
+            textBoxNom.Text = string.Empty;
+            textBoxPrenom.Text = string.Empty;
+            textBoxEmail.Text = string.Empty;
+            textBoxTele.Text = string.Empty;
+            textBoxDateDeNaissance.Text = string.Empty;
+            cmbpays.Text = string.Empty;
+            cmbville.Text = string.Empty;
+            specialite.Text = string.Empty;
+
+            textBoxNom.Focus();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+            textBoxNom.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            textBoxPrenom.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBoxEmail.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            textBoxTele.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            textBoxDateDeNaissance.Text = dataGridView1.SelectedRows[0].Cells[5].Value.ToString();
+            cmbpays.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            cmbville.Text = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+            specialite.Text = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+        }
+
+
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            GetUsersRecord();
+        }
+
     }
 }

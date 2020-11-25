@@ -14,3 +14,10 @@ C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppt
 C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.pdb
 C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.genruntimeconfig.cache
 C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.GestAppt.resources
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\admin\source\repos\GestAppts\GestAppts\obj\Debug\netcoreapp3.1\GestAppts.csproj.CopyComplete
